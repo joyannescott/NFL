@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  score: 1
+  game1: 1
+  game2: 1
+  game3: 1
+  game4: 1
+  game5: 1
+  game6: 1
+  game7: 1
+  game8: 1
+  game9: 1
+  game10: 1
+  game11: 1
+  game12: 1
+  game13: 1
+  game14: 1
+  game15: 1
+  game16: 1
+
+two:
+  week: 1
+  score: 1
+  game1: 1
+  game2: 1
+  game3: 1
+  game4: 1
+  game5: 1
+  game6: 1
+  game7: 1
+  game8: 1
+  game9: 1
+  game10: 1
+  game11: 1
+  game12: 1
+  game13: 1
+  game14: 1
+  game15: 1
+  game16: 1

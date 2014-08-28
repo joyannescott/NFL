@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @schedule.week %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @schedule.game %>
+</p>
+
+<p>
+  <strong>Team0:</strong>
+  <%= @schedule.team0 %>
+</p>
+
+<p>
+  <strong>Team1:</strong>
+  <%= @schedule.team1 %>
+</p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @schedule.winner %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

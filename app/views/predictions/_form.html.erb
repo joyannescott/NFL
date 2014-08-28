@@ -1,0 +1,89 @@
+<%= form_for(@prediction) do |f| %>
+  <% if @prediction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prediction.errors.count, "error") %> prohibited this prediction from being saved:</h2>
+
+      <ul>
+      <% @prediction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br>
+    <%= f.number_field :score %>
+  </div>
+  <div class="field">
+    <%= f.label :game1 %><br>
+    <%= f.number_field :game1 %>
+  </div>
+  <div class="field">
+    <%= f.label :game2 %><br>
+    <%= f.number_field :game2 %>
+  </div>
+  <div class="field">
+    <%= f.label :game3 %><br>
+    <%= f.number_field :game3 %>
+  </div>
+  <div class="field">
+    <%= f.label :game4 %><br>
+    <%= f.number_field :game4 %>
+  </div>
+  <div class="field">
+    <%= f.label :game5 %><br>
+    <%= f.number_field :game5 %>
+  </div>
+  <div class="field">
+    <%= f.label :game6 %><br>
+    <%= f.number_field :game6 %>
+  </div>
+  <div class="field">
+    <%= f.label :game7 %><br>
+    <%= f.number_field :game7 %>
+  </div>
+  <div class="field">
+    <%= f.label :game8 %><br>
+    <%= f.number_field :game8 %>
+  </div>
+  <div class="field">
+    <%= f.label :game9 %><br>
+    <%= f.number_field :game9 %>
+  </div>
+  <div class="field">
+    <%= f.label :game10 %><br>
+    <%= f.number_field :game10 %>
+  </div>
+  <div class="field">
+    <%= f.label :game11 %><br>
+    <%= f.number_field :game11 %>
+  </div>
+  <div class="field">
+    <%= f.label :game12 %><br>
+    <%= f.number_field :game12 %>
+  </div>
+  <div class="field">
+    <%= f.label :game13 %><br>
+    <%= f.number_field :game13 %>
+  </div>
+  <div class="field">
+    <%= f.label :game14 %><br>
+    <%= f.number_field :game14 %>
+  </div>
+  <div class="field">
+    <%= f.label :game15 %><br>
+    <%= f.number_field :game15 %>
+  </div>
+  <div class="field">
+    <%= f.label :game16 %><br>
+    <%= f.number_field :game16 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

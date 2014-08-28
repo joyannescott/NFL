@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  game: 1
+  team0: MyString
+  team1: MyString
+  winner: 1
+
+two:
+  week: 1
+  game: 1
+  team0: MyString
+  team1: MyString
+  winner: 1

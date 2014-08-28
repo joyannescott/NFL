@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nfl</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner ">
+		<div class="container">
+			<a href="#" class="brand"> NFL Season 2014-2015</a>
+			<ul class="nav">
+				<li ><%= link_to "All Predictions", predictions_path %></li>
+			</ul>
+			<ul class="nav pull-right">
+				<% if user_signed_in? %>
+				    <li ><%= current_user %></li>
+					<li ><%= link_to current_user.user_name, edit_user_registration_path %></li>
+				 	<li ><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li ><%= link_to "Registration", new_user_registration_path %></li>
+					<li ><%= link_to "Log In", new_user_session_path %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="frame">
+<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<h1>Listing predictions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Score</th>
+      <th>Game1</th>
+      <th>Game2</th>
+      <th>Game3</th>
+      <th>Game4</th>
+      <th>Game5</th>
+      <th>Game6</th>
+      <th>Game7</th>
+      <th>Game8</th>
+      <th>Game9</th>
+      <th>Game10</th>
+      <th>Game11</th>
+      <th>Game12</th>
+      <th>Game13</th>
+      <th>Game14</th>
+      <th>Game15</th>
+      <th>Game16</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @predictions.each do |prediction| %>
+      <tr>
+        <td><%= prediction.week %></td>
+        <td><%= prediction.score %></td>
+        <td><%= prediction.game1 %></td>
+        <td><%= prediction.game2 %></td>
+        <td><%= prediction.game3 %></td>
+        <td><%= prediction.game4 %></td>
+        <td><%= prediction.game5 %></td>
+        <td><%= prediction.game6 %></td>
+        <td><%= prediction.game7 %></td>
+        <td><%= prediction.game8 %></td>
+        <td><%= prediction.game9 %></td>
+        <td><%= prediction.game10 %></td>
+        <td><%= prediction.game11 %></td>
+        <td><%= prediction.game12 %></td>
+        <td><%= prediction.game13 %></td>
+        <td><%= prediction.game14 %></td>
+        <td><%= prediction.game15 %></td>
+        <td><%= prediction.game16 %></td>
+        <td><%= link_to 'Show', prediction %></td>
+        <td><%= link_to 'Edit', edit_prediction_path(prediction) %></td>
+        <td><%= link_to 'Destroy', prediction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prediction', new_prediction_path %>
