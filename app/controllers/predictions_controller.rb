@@ -4,6 +4,7 @@ class PredictionsController < ApplicationController
   # GET /predictions
   # GET /predictions.json
   def index
+    @current = 1
     @predictions = Prediction.all
   end
 
@@ -14,6 +15,7 @@ class PredictionsController < ApplicationController
 
   # GET /predictions/new
   def new
+    @current = 1
     @prediction = Prediction.new
   end
 
@@ -69,6 +71,6 @@ class PredictionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prediction_params
-      params.require(:prediction).permit(:week, :score, :game1, :game2, :game3, :game4, :game5, :game6, :game7, :game8, :game9, :game10, :game11, :game12, :game13, :game14, :game15, :game16)
+      params.require(:prediction).permit(:week, :user_id, :score, :game1, :game2, :game3, :game4, :game5, :game6, :game7, :game8, :game9, :game10, :game11, :game12, :game13, :game14, :game15, :game16)
     end
 end
