@@ -1,0 +1,70 @@
+<h1>My Predictions</h1>
+           <table>
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Score</th>
+ 
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @predictions.each do |prediction| %>
+                <tr>
+                  <td><%= prediction.week %></td>
+                  <td><%= prediction.score  %></td>
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 1) %>
+                  <% @schedules.each do |schedule| %>
+
+                    <td>
+                      <% if prediction.game1? %>
+                          <p class="text-success"> <%= schedule.team1 %> </p>
+                      <% else %>
+                        <p class="text-success"> <%= schedule.team0 %></p>
+                      <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 2) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game2? %>
+                          <%= schedule.team1 %>
+                      <% else %>
+                        <%= schedule.team0 %>
+                      <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 3) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game3? %>
+                          <%= schedule.team1 %>
+                      <% else %>
+                        <%= schedule.team0 %>
+                      <% end %>
+                      <% if prediction.game3 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <td><%= link_to 'Edit', edit_prediction_path(prediction) %></td>
+                  <td><%= link_to 'Delete', prediction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+<%= link_to 'New Prediction', new_prediction_path %>
+
+</div>
+
+<br>

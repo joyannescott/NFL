@@ -10,6 +10,10 @@ Nfl::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'predictions#index'
 
+   resources :predictions
+  get "user_predictions" , to: "predictions#user", as: :user_predictions  
+ 
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
