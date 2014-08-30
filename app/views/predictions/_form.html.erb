@@ -37,6 +37,110 @@
           <%= f.select(:game3, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
         <% end %>
     <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 4) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game4? %>
+          <%= f.select(:game4, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game4, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 5) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game5? %>
+          <%= f.select(:game5, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game5, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 6) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game6? %>
+          <%= f.select(:game6, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game6, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 7) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game7? %>
+          <%= f.select(:game7, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game7, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 8) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game8? %>
+          <%= f.select(:game8, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game8, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 9) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game9? %>
+          <%= f.select(:game9, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game9, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 10) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game10? %>
+          <%= f.select(:game10, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game10, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 11) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game11? %>
+          <%= f.select(:game11, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game11, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 12) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game12? %>
+          <%= f.select(:game12, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game12, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 13) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game13? %>
+          <%= f.select(:game13, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game13, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 14) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game14? %>
+          <%= f.select(:game14, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game14, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 15) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game15? %>
+          <%= f.select(:game15, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game15, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
+    <% @schedules  = Schedule.where(week: @current, game: 16) %>
+    <% @schedules.each do |schedule| %>
+        <% if @prediction.game16? %>
+          <%= f.select(:game16, options_for_select([[schedule.team1, 1], [schedule.team0, 0]])) %><br> 
+        <% else %>
+          <%= f.select(:game16, options_for_select([[schedule.team0, 0], [schedule.team1, 1]])) %><br> 
+        <% end %>
+    <% end %>
  </div>
     <%= f.button :submit %>
 

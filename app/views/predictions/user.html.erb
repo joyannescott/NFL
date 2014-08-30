@@ -56,6 +56,175 @@
                         <% end %>
                     </td>
                   <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 4) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game4? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game4 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 5) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game5? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game5 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 6) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game6? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game6 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 7) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game7? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game7 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 8) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game8? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game8 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 9) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game9? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game9 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 10) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game10? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game10 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 11) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game11? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game11 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 12) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game12? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game12 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 13) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game13? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game13 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 14) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game14? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game14 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 15) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game15? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game15 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
+                  <% @schedules  = Schedule.where(week: prediction.week, game: 16) %>
+                  <% @schedules.each do |schedule| %>
+                    <td>
+                      <% if prediction.game16? %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
+                      <% else %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                      <% end %>
+                      <% if prediction.game16 == schedule.winner %>
+                        <% prediction.score += 1 %>
+                        <% end %>
+                    </td>
+                  <% end %> 
                   <% if prediction.week == @current %>
                     <% @current_exists = true %>
                     <td><p><%= link_to 'Edit', edit_prediction_path(prediction) %></p></td>
