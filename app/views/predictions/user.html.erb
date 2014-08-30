@@ -70,10 +70,12 @@
               <tr>
                 <th>Total</th>
                 <% prediction = @predictions.first %>
-                <th><%= prediction.user.score %></th>
+                <% if prediction? %>
+                  <th><%= prediction.user.score %></th>
+                <% end %>
               </tr>
             </thead>
- 
+
 <% if @current_exists != true %>
   <%= link_to "Add This Week's Prediction", new_prediction_path %>
 <% end %>
