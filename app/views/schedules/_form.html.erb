@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+ 
   <div class="field">
     <%= f.label :week %><br>
     <%= f.number_field :week %>
@@ -31,6 +32,7 @@
     <%= f.label :winner %><br>
     <%= f.number_field :winner %>
   </div>
+    <%= f.hidden_field :value, :value => 1 %>
   <div class="actions">
     <%= f.submit %>
   </div>

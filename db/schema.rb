@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828212808) do
+ActiveRecord::Schema.define(version: 20140829213407) do
 
   create_table "predictions", force: true do |t|
     t.integer  "week"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140828212808) do
     t.integer  "winner"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "value"
   end
 
   create_table "users", force: true do |t|

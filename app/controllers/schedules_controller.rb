@@ -28,7 +28,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       if @schedule.save
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }
+        format.html { redirect_to schedule_url, notice: 'Schedule was successfully created.' }
         format.json { render action: 'show', status: :created, location: @schedule }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class SchedulesController < ApplicationController
   def update
     respond_to do |format|
       if @schedule.update(schedule_params)
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully updated.' }
+        format.html { redirect_to schedule_url, notice: 'Schedule was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +69,6 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.require(:schedule).permit(:week, :game, :team0, :team1, :winner)
+      params.require(:schedule).permit(:week, :game, :team0, :team1, :winner, :value)
     end
 end

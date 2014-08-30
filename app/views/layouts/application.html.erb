@@ -16,6 +16,7 @@
 		<div class="container">
 			<a href="#" class="brand"> NFL Season 2014-2015</a>
 			<ul class="nav">
+				<li ><%= link_to "Leader Board", leaders_path %></li>
 				<li ><%= link_to "All Predictions", predictions_path %></li>
 				<% if user_signed_in? %>
 					<li ><%= link_to "My Predictions", user_predictions_path %></li>

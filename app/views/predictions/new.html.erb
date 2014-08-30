@@ -1,6 +1,6 @@
-<h1>New prediction <%= current_user.id %></h1>
-<%= @prediction.user_id = current_user.id %>
+<h1>New prediction for week  <%= @current %></h1>
+<% @prediction.user_id = current_user.id %>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', predictions_path %>
+<%= link_to 'Back', user_predictions_path %>

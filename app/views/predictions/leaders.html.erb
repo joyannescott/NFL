@@ -1,0 +1,19 @@
+<h1>Leader Board</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><p><%= user.user_name %></p></td>
+        <td><p><%= user.score %></p></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -20,51 +20,63 @@
             <tbody>
               <% @predictions.each do |prediction| %>
                 <tr>
-                  <td><%= prediction.week %></td>
-                  <td><%= prediction.score  %></td>
+                  <td><p><%= prediction.week %></p></td>
+                  <td><p><%= prediction.score %></p></td>
                   <% @schedules  = Schedule.where(week: prediction.week, game: 1) %>
                   <% @schedules.each do |schedule| %>
 
                     <td>
                       <% if prediction.game1? %>
-                          <p class="text-success"> <%= schedule.team1 %> </p>
+                          <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <p class="text-success"> <%= schedule.team0 %></p>
-                      <% end %>
+                          <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                     <% end %>
                     </td>
                   <% end %> 
                   <% @schedules  = Schedule.where(week: prediction.week, game: 2) %>
                   <% @schedules.each do |schedule| %>
                     <td>
                       <% if prediction.game2? %>
-                          <%= schedule.team1 %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <%= schedule.team0 %>
-                      <% end %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                       <% end %>
                     </td>
                   <% end %> 
                   <% @schedules  = Schedule.where(week: prediction.week, game: 3) %>
                   <% @schedules.each do |schedule| %>
                     <td>
                       <% if prediction.game3? %>
-                          <%= schedule.team1 %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <%= schedule.team0 %>
+                         <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
                       <% end %>
                       <% if prediction.game3 == schedule.winner %>
                         <% prediction.score += 1 %>
                         <% end %>
                     </td>
                   <% end %> 
-                  <td><%= link_to 'Edit', edit_prediction_path(prediction) %></td>
-                  <td><%= link_to 'Delete', prediction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <% if prediction.week == @current %>
+                    <% @current_exists = true %>
+                    <td><p><%= link_to 'Edit', edit_prediction_path(prediction) %></p></td>
+                    <td><p><%= link_to 'Delete', prediction, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+                  <% end %>
                 </tr>
               <% end %>
             </tbody>
           </table>
-
-<%= link_to 'New Prediction', new_prediction_path %>
-
+         <table>
+            <thead>
+              <tr>
+                <th>Total</th>
+                <% prediction = @predictions.first %>
+                <th><%= prediction.user.score %></th>
+              </tr>
+            </thead>
+ 
+<% if @current_exists != true %>
+  <%= link_to "Add This Week's Prediction", new_prediction_path %>
+<% end %>
 </div>
 
 <br>

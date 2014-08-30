@@ -32,35 +32,35 @@
               <% @entries  = Prediction.where(week: i) %>
               <% @entries.each do |prediction| %>
                 <tr>
-                  <td><%= prediction.user.user_name %></td>
-                  <td><%= prediction.score %></td>
+                  <td><p><%= prediction.user.user_name %></p></td>
+                  <td><p><%= prediction.score %></p></td>
                   <% @schedules  = Schedule.where(week: i, game: 1) %>
                   <% @schedules.each do |schedule| %>
                     <td>
                       <% if prediction.game1? %>
-                          <%= schedule.team1 %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <%= schedule.team0 %>
-                      <% end %>
+                          <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
+                       <% end %>
                     </td>
                   <% end %> 
                   <% @schedules  = Schedule.where(week: i, game: 2) %>
                   <% @schedules.each do |schedule| %>
                     <td>
                       <% if prediction.game2? %>
-                          <%= schedule.team1 %>
+                         <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <%= schedule.team0 %>
+                          <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
                       <% end %>
                     </td>
                   <% end %> 
-                  <% @schedules  = Schedule.where(week: :i, game: 3) %>
+                  <% @schedules  = Schedule.where(week: i, game: 3) %>
                   <% @schedules.each do |schedule| %>
                     <td>
                       <% if prediction.game3? %>
-                          <%= schedule.team1 %>
+                          <p <% if schedule.winner === 1 %> class="text-success" <% end %> > <%= schedule.team1 %> </p>
                       <% else %>
-                        <%= schedule.team0 %>
+                          <p <% if schedule.winner === 0 %> class="text-success" <% end %> > <%= schedule.team0 %> </p>
                       <% end %>
                     </td>
                   <% end %> 
@@ -76,4 +76,3 @@
 
 <br>
 
-<%= link_to 'New Prediction', new_prediction_path %>
