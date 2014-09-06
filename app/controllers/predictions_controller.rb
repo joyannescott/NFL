@@ -90,7 +90,7 @@ class PredictionsController < ApplicationController
       1
     end
 
-    def calculate_score
+     def calculate_score
       @users = User.all
       @users.each do |user|
         user.score = 0
@@ -111,7 +111,85 @@ class PredictionsController < ApplicationController
           end
           @schedules = Schedule.where(week: prediction.week, game: 3)
           @schedules.each do |schedule|
-            if schedule.winner === prediction.game2
+            if schedule.winner === prediction.game3
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 4)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game4
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 5)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game5
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 6)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game6
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 7)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game7
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 8)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game8
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 9)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game9
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 10)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game10
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 11)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game11
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 12)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game12
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 13)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game13
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 14)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game14
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 15)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game15
+              prediction.score += schedule.value
+            end
+          end
+          @schedules = Schedule.where(week: prediction.week, game: 16)
+          @schedules.each do |schedule|
+            if schedule.winner === prediction.game16
               prediction.score += schedule.value
             end
           end
