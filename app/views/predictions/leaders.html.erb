@@ -10,10 +10,13 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><p><%= user.user_name %></p></td>
+     <% if user.score != 0 %>
+       <tr>
+         <td><p><%= user.user_name %></p></td>
         <td><p><%= user.score %></p></td>
-      </tr>
+        <% end %>
+       </tr>
+     <% end %>
     <% end %>
   </tbody>
 </table>
