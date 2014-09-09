@@ -6,7 +6,7 @@ class PredictionsController < ApplicationController
   # GET /predictions.json
   def index
     @current = current_week
-    @predictions = Prediction.all
+    @predictions = Prediction.order(score: :desc)
   end
 
   def leaders

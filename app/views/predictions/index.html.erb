@@ -29,7 +29,7 @@
             </thead>
 
             <tbody>
-              <% @entries  = Prediction.where(week: i) %>
+              <% @entries  = @predictions.where(week: i) %>
               <% @entries.each do |prediction| %>
                 <tr>
                   <td><p><%= prediction.user.user_name %></p></td>
