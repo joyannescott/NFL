@@ -87,7 +87,7 @@ class PredictionsController < ApplicationController
     end
     
     def current_week
-      4
+      5
     end
 
      def calculate_score
