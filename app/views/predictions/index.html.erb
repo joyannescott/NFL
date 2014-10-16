@@ -17,7 +17,7 @@
               <tr>
                 <th>Name</th>
                 <th>Current Score</th>
-                <% @schedules  = Schedule.where(week: i) %>
+                <% @schedules  = Schedule.where(week: i).order(game: :asc) %>
                 <% @schedules.each do |schedule| %>
                   <th> <%= schedule.team0 %> <br> <%= schedule.team1 %></th>
                 <% end %>
